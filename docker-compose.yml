@@ -1,0 +1,18 @@
+services:
+  downloader:
+    build: .
+    image: fraud-eda-downloader:latest
+    container_name: fraud_eda_downloader
+    restart: "no"               # одноразовый запуск
+    env_file:
+      - .env                    # переменные окружения с URL
+    environment:
+      # Можно переопределить пути внутри контейнера при желании
+      DATA_DIR: /app/data
+      CACHE_DIR: /app/cache
+      LOGS_DIR: /app/logs
+    volumes:
+      - ./data:/app/data        # локальные CSV будут тут
+      - ./cache:/app/cache      # кэш "сырого" ответа на основе хеша URL
+      - ./logs:/app/logs        # логи
+    command: ["python", "-m", "src.download_data"]

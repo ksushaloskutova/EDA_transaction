@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.ipynb_checkpoints
+
+# Virtual Envs
+.venv/
+env/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Models & Downloads (если Hugging Face модели локально)
+*.bin
+*.pt
+*.h5
+.cache/
+checkpoints/
+models/
+
+# Environment
+.env
+
+# Docker
+*.pid
+*.tar
+*.bak
+*.old
+*.swp
+*.tmp
+*.sock
+.docker/
+docker-compose.override.yml
+
+data/
