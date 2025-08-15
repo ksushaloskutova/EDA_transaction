@@ -1,4 +1,11 @@
-requests>=2.32.0
-pandas>=2.2.0
-openpyxl>=3.1.2
-python-dotenv>=1.0.1
+requests==2.32.4
+pandas==2.3.1
+openpyxl==3.1.5
+python-dotenv==1.1.1
+jupyter==1.1.1
+notebook==7.4.5
+matplotlib
+seaborn
+numpy
+pandas
+pyarrow
